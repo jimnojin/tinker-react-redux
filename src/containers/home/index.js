@@ -2,12 +2,14 @@ import React from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import Moment from 'react-moment';
+
 import {
   increment,
   incrementAsync,
   decrement,
   decrementAsync
-} from '../../modules/counter'
+} from '../../reducers/counter'
 
 const Home = props => (
   <div>
@@ -25,6 +27,8 @@ const Home = props => (
     </p>
 
     <p><button onClick={() => props.changePage()}>Go to about page via redux</button></p>
+
+    <Moment unix format="YYYY/MM/DD">1507204638</Moment>
   </div>
 )
 
